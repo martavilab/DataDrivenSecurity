@@ -137,7 +137,7 @@ Elements:
      * *Effectiveness* (optional)   
      How effective the detection method may be in detecting the associated weakness. This assumes the use of best-of-breed tools, analysts, and methods. There is limited consideration for financial costs, labor, or time.     
      * *Effectiveness_Notes* (optional)    
-     Additional discussion of the strengths and shortcomings of this detection method.
+     Additional discussion of the strengths and shortcomings of this detection method.     
      <sub>Optional Detection_Method_ID attribute for internal team use to uniquely identify methods that are repeated across any number of individual weaknesses. ts value matches the following format: DM-1. </sub>    
 <sub>Not in link 2</sub>    
      
