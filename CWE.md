@@ -1,7 +1,5 @@
 ## CWE
 <img src="/image/logo_cwe.jpg" width="200">
-
-
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
 In this standard each unique weakness is assigned a specific CWE number.       
 In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/).         
@@ -15,7 +13,7 @@ The CWE identification number.
 * ***Name***      
 The name assigned to the CWE-ID.       
    
-* ***Weakness Abstraction*** (*AbstractionEnumeration* in the schema path)      
+* ***Weakness Abstraction*** (see *AbstractionEnumeration* in the schema path)      
 The CWE entries in the list form a tree of different abstraction layers:   
      - **Pillar**     
 An example of a a CWE pillar is: CWE-118: Incorrect Access of Indexable Resource ('Range Error').
@@ -25,7 +23,7 @@ Classes are also very abstract entries. Language and technology independent. An 
 Bases are more specific than classes. An example, CWE-787: Out-Of Bounds-Write and is a child of CWE-119.
      - **Variant**      
 The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.       
-* ***Status*** (*StatusEnumeration* in the schema path)     
+* ***Status*** (see *StatusEnumeration* in the schema path)     
 Status values that an entity (view, category, weakness) can have:
      * **Deprecated**   
      Entity has been removed from CWE, likely because it was a duplicate or was created in error.    
@@ -47,7 +45,7 @@ A written description of the given weakness.
 * ***Extended description***   
 Extra written description (optional).  
    
-* ***Related Weaknesses***  (*RelatedWeaknessesType* in the schema path)   
+* ***Related Weaknesses***  (see *RelatedWeaknessesType* in the schema path)   
 To refer to other weaknesses that differ only in their level of abstraction. It contains one or more elements each of which contain the nature of the relation.   
 The Nature of a weakness (*RelatedNatureEnumeration* type in the schema path) is directly related to the abstraction layer it has. The different natures are the following:   
      - **ChildOf**   
@@ -71,7 +69,7 @@ We can see that this field is composed of 3 or 4 subfields: <Nature, CWE_ID, Vie
 
 Finally, we could have the optional subview *Ordinal* which can only be "Primary".   
    
-***Weakness Ordinalities***   
+***Weakness Ordinalities***(see *WeaknessOrdinalitiesType* in the schema path)   
 
 
 
