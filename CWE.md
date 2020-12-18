@@ -8,7 +8,7 @@ So as to study this standard, we can access and download its data from: https://
      
 In the following lines we will have a close look at each one of the simple types of the defined schema and other column values that are present in our dataset (our downloaded file) so we can grasp which type of information we will be dealing with (note that they will be presented in the same order they will be found in the dataset).    
     
-* ***CWE-ID***     
+* <font size="25"> ***CWE-ID***  </font>    
 The CWE identification number.   
    
 * ***Name***      
