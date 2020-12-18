@@ -4,7 +4,7 @@
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
 In this standard each unique weakness is assigned a specific CWE number.       
 In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/).         
-So as to study this standard, we can access and download its data from: https://cwe.mitre.org/data/downloads.html. Alternatively: https://github.com/Whamo12/fetch-cwe-list. Once we do so, we will be able to see our data structure.         
+So as to study this standard, we can access and download its data from: https://cwe.mitre.org/data/downloads.html <sub>(link 1)</sub>. Alternatively: https://github.com/Whamo12/fetch-cwe-list <sub>(link 2)</sub>. Once we do so, we will be able to see our data structure.         
      
 In the following lines we will have a close look at each one of the simple types of the defined schema and other column values that are present in our dataset (our downloaded file) so we can grasp which type of information we will be dealing with (note that they will be presented in the same order they will be found in the dataset).    
     
@@ -23,7 +23,8 @@ Classes are also very abstract entries. Language and technology independent. An 
      - **Base**      
 Bases are more specific than classes. An example, CWE-787: Out-Of Bounds-Write and is a child of CWE-119.
      - **Variant**      
-The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.       
+The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.      
+       
 * ***Status*** (see *StatusEnumeration* in the schema path)     
 Status values that an entity (view, category, weakness) can have:
      * **Deprecated**   
@@ -37,8 +38,10 @@ Status values that an entity (view, category, weakness) can have:
      * **Usable**   
      Refers to an entity that has received close, extensive review, with critical elements verified.    
      * **Stable**   
-     All important elements have been verified, and the entry is unlikely to change significantly in the future.            
-   Status enumeration might change over time.
+     All important elements have been verified, and the entry is unlikely to change significantly in the future.   
+     
+   Status enumeration might change over time.   
+   
 * ***Description***   
 A written description of the given weakness.   
    
@@ -69,11 +72,34 @@ The Nature of a weakness (see *RelatedNatureEnumeration* type in the schema path
 
    Finally, we could have the optional subview *Ordinal* (see *WeaknessOrdinalitiesType* in the schema path) which can only be "Primary" since it is used to determine if this relationship is the primary ChildOf relationship for this weakness for a given View_ID.   
    
-   <sub>* *Weakness Ordinalities*    
-        Indicates potential ordering relationships with other weaknesses: <Ordinality, (Description)>    
-        The required *Ordinality* element identifies whether the weakness has a **primary**, **resultant**, or **indirect** relationship. It is important to note that it is         possible for the same entry to be primary in some instances and resultant in others.       
-        The optional *Description* contains the context in which the relationship exists. </sub>    
-* ***Applicable platforms***
+* ***Weakness Ordinalities***    
+Indicates potential ordering relationships with other weaknesses: <Ordinality, (Description)>    
+The required *Ordinality* element identifies whether the weakness has a **primary**, **resultant**, or **indirect** relationship. It is important to note that it is         possible for the same entry to be primary in some instances and resultant in others.       
+The optional *Description* contains the context in which the relationship exists.   
+<sub>Not in link 2</sub>    
+   
+* ***Applicable platforms*** (see *ApplicablePlatformsType* in the schema path)   
+The **languages**, **operating systems**, **architectures**, and **technologies** in which a given weakness could appear. The most common described one is Language.   
+Each of these have some atributes like *Class* and *Name*. However there is one required, which is *Prevalence*. It identifies the regularity with which the weakness is applicable to that platform.   
+Note that when providing an operating system name, an optional Common Platform Enumeration (CPE) identifier can be used to a identify a specific OS.     
+    
+* ***Background details*** (see *BackgroundDetailsType* in the schema path)      
+Contains one or more elements, each of which contains information that is relevant but not related to the nature of the weakness itself.     
+     
+* ***Alternate Terms*** (see *BackgroundDetailsType* in the schema path)   
+* ***Modes Of Introduction*** (see *BackgroundDetailsType* in the schema path)   
+* ***Exploitation Factors*** (see *BackgroundDetailsType* in the schema path)   
+* ***Likelihood of Exploit*** (see *BackgroundDetailsType* in the schema path)   
+* ***Common Consequences*** (see *BackgroundDetailsType* in the schema path)   
+* ***Detection Methods*** (see *BackgroundDetailsType* in the schema path)   
+* ***Potential Mitigations*** (see *BackgroundDetailsType* in the schema path)   
+* ***Observed examples***    
+* ***Functional Areas*** (see *BackgroundDetailsType* in the schema path)   
+* ***Affected Resources***   
+* ***Taxonomy Mappings*** (see *BackgroundDetailsType* in the schema path)   
+* ***Related Attack Patterns*** (see *BackgroundDetailsType* in the schema path)   
+* ***Notes*** (see *BackgroundDetailsType* in the schema path)   
+
 
 
 
