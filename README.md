@@ -1,8 +1,7 @@
 # DataDrivenSecurity
 
 ## CWE
-[<img src="logo_cwe.jpg" width="25"/>](/image/logo_cwe.jpg/)
-![picture](/image/logo_cwe.jpg/)
+![picture](/image/logo_cwe.jpg/){ width=50% height=50% }
 
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
 In this standard each unique weakness is assigned a specific CWE number.       
