@@ -37,8 +37,7 @@ Status values that an entity (view, category, weakness) can have:
      * **Usable**   
      Refers to an entity that has received close, extensive review, with critical elements verified.    
      * **Stable**   
-     All important elements have been verified, and the entry is unlikely to change significantly in the future.    
-
+     All important elements have been verified, and the entry is unlikely to change significantly in the future.            
 Status enumeration might change over time.
 * ***Description***   
 A written description of the given weakness.   
@@ -69,11 +68,11 @@ We can see that this field is composed of 3 or 4 subfields: <Nature, CWE_ID, Vie
 *View_ID* subfield specifies which view the given relationship is relevant to. It is a unique identifier of an individual view element to which this relationship pertains. A view represents a perspective with which one might look at the weaknesses in the catalog. There are three different types of views: graphs, explicit slices, and implicit slices. An example of this would be CWE-630: Weaknesses Examined by SAMATE and CWE-658: Weaknesses found in the C Language. Therefore, we could conclude they are the different approaches there are given a specific weakness.   
 
 Finally, we could have the optional subview *Ordinal* (see *WeaknessOrdinalitiesType* in the schema path) which can only be "Primary" since it is used to determine if this relationship is the primary ChildOf relationship for this weakness for a given View_ID.   
-     * ***Weakness Ordinalities***    
+     * *Weakness Ordinalities*    
      Indicates potential ordering relationships with other weaknesses: <Ordinality, (Description)>    
      The required *Ordinality* element identifies whether the weakness has a **primary**, **resultant**, or **indirect** relationship. It is important to note that it is         possible for the same entry to be primary in some instances and resultant in others.       
      The optional *Description* contains the context in which the relationship exists. 
-
+* ***Applicable platforms***
 
 
 
