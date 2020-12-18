@@ -86,8 +86,9 @@ Elements:
 The **languages**, **operating systems**, **architectures**, and **technologies** in which a given weakness could appear. The most common described one is Language.   
 Each of these have some atributes like: *Class*, *Name* and:
      * *Prevalence* (required)   
-     Identifies the regularity with which the weakness is applicable to that platform.   
-Note that when providing an operating system name, an optional Common Platform Enumeration (CPE) identifier can be used to a identify a specific OS.     
+     Identifies the regularity with which the weakness is applicable to that platform.      
+     
+   Note that when providing an operating system name, an optional Common Platform Enumeration (CPE) identifier can be used to a identify a specific OS.     
     
 * ***Background details*** (see *BackgroundDetailsType* in the schema path)      
 Contains one or more elements, each of which contains information that is relevant but not related to the nature of the weakness itself.     
