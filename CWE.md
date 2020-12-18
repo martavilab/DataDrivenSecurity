@@ -38,7 +38,6 @@ Status values that an entity (view, category, weakness) can have:
      Refers to an entity that has received close, extensive review, with critical elements verified.    
      * **Stable**   
      All important elements have been verified, and the entry is unlikely to change significantly in the future.    
-     
 Status enumeration might change over time.
 * ***Description***   
 A written description of the given weakness.   
