@@ -1,5 +1,6 @@
 ## CWE
 <img src="/image/logo_cwe.jpg" width="200">   
+
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
 In this standard each unique weakness is assigned a specific CWE number.       
 In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/).         
@@ -69,7 +70,7 @@ We can see that this field is composed of 3 or 4 subfields: <Nature, CWE_ID, Vie
 
 Finally, we could have the optional subview *Ordinal* which can only be "Primary".   
    
-***Weakness Ordinalities***(see *WeaknessOrdinalitiesType* in the schema path)   
+***Weakness Ordinalities*** (see *WeaknessOrdinalitiesType* in the schema path)   
 
 
 
