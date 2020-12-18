@@ -7,7 +7,7 @@ Study of some security data standards
 
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
 In this standard each unique weakness is assigned a specific CWE number. 
-In order to describe a weakness there is a specific [SCHEMA] (https://cwe.mitre.org/documents/schema/). In the following lines we will have a close look at each one of the simple types of the defined schema.
+In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/). In the following lines we will have a close look at each one of the simple types of the defined schema.
 
 *AbstractionEnumeration*
 The CWE entries in the list form a tree of different abstraction layers:
