@@ -97,8 +97,9 @@ Contains one or more elements, each of which contains information that is releva
 To indicate one or more other names used to describe a given weakness.   
 Required elements: 
      * *Term* (contains the actual alternate term)   
-     * *Description* (context for each alternate term by which this weakness may be known).  
-<sub>Not in link 2</sub>    
+     * *Description* (context for each alternate term by which this weakness may be known).   
+     
+   <sub>Not in link 2</sub>    
      
 * ***Modes Of Introduction*** (see *ModesOfIntroductionType* in the schema path)   
 To provide information about how and when a given weakness may be introduced. If there are multiple possible introduction points, then a separate Introduction element should be included for each.    
@@ -110,7 +111,8 @@ Elements:
      
 * ***Exploitation Factors*** (see *ExploitationFactorsType* in the schema path)   
 Conditions or factors that could increase the likelihood of exploit for this weakness.    
-<sub>Not in link 2</sub>    
+     
+   <sub>Not in link 2</sub>    
      
 * ***Likelihood of Exploit***    
 How likely a weakness is to be exploited if exposed. Appropriate values are one of **Low**, **Medium**, or **High**.    
