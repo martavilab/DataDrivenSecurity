@@ -43,6 +43,7 @@ The Nature of a weakness (*RelatedNatureEnumeration* type in the schema path) is
      Denotes a weakness that, in the proper environment and context, can also be perceived as the target weakness. Note that it is not necessarily reciprocal.   
      - **PeerOf**   
      To show some similarity with the target weakness yet no other type of relationship can be stated.   
+     
 We can see that this field is composed of 3 or 4 subfields: <Nature, CWE_ID, View_ID, (Ordinal)>.    
 Firstly, the Nature subfield will be one of the previously seen, which will point to the target weakness, which will be decribed by the CWE_ID.    
 View_ID subfield specifies which view the given relationship is relevant to. It is a unique identifier of an individual view element to which this relationship pertains. A view represents a perspective with which one might look at the weaknesses in the catalog. There are three different types of views: graphs, explicit slices, and implicit slices. An example of this would be CWE-630:Weaknesses Examined by SAMATE and CWE-658: Weaknesses found in the C Language. Therefore, we could conclude they are the different approaches there are given a weakness.   
