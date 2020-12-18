@@ -29,7 +29,7 @@ The most specific types of weaknesses. An example of such is CWE-121: Stack-base
 Status values that an entity (view, category, weakness) can have:
      * **Deprecated**   
      Entity has been removed from CWE, likely because it was a duplicate or was created in error.    
-     * **Obsolete**
+     * **Obsolete**    
      When an entity is still valid but no longer is relevant, likely because it has been superceded by a more recent entity.    
      * **Incomplete**   
      The entity does not have all important elements filled, and there is no guarantee of quality.   
