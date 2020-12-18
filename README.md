@@ -16,13 +16,13 @@ The CWE identification number.
 The name assigned to the CWE-ID.        
 * ***Weakness Abstraction*** (*AbstractionEnumeration* in the schema path)      
 The CWE entries in the list form a tree of different abstraction layers:   
-     * Pillar      
+     - **Pillar**     
 An example of a a CWE pillar is: CWE-118: Incorrect Access of Indexable Resource ('Range Error').
-     * Class      
+     - **Class**      
 Classes are also very abstract entries. Language and technology independent. An example of a CWE class is: CWE-119: Improper Restriction of Operations whithin the Bounds of a Memory Buffer. It is a child of CWE-118.
-     * Base      
+     - **Base**      
 Bases are more specific than classes. An example, CWE-787: Out-Of.Bounds-Write and is a child of CWE-119.
-     * Variant      
+     - **Variant**      
 The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.       
 * ***Status*** (*StatusEnumeration* in the schema path)     
      
