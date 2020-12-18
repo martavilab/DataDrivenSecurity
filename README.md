@@ -9,7 +9,8 @@ Study of some security data standards
 In this standard each unique weakness is assigned a specific CWE number.       
 In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/).         
 So as to study this standard, we can access and download its data from: https://cwe.mitre.org/data/downloads.html. Once we do so, we will be able to see our data structure.         
-In the following lines we will have a close look at each one of the simple types of the defined schema and values that are present in our dataset (our downloaded file) to be able to grasp which type of information we will be dealing with.        
+     
+In the following lines we will have a close look at each one of the simple types of the defined schema and values that are present in our dataset (our downloaded file) se we can grasp which type of information we will be dealing with.        
         
 ***AbstractionEnumeration***      
 The CWE entries in the list form a tree of different abstraction layers:   
