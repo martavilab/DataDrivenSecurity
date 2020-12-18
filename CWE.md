@@ -73,25 +73,74 @@ The Nature of a weakness (see *RelatedNatureEnumeration* type in the schema path
    Finally, we could have the optional subview *Ordinal* (see *WeaknessOrdinalitiesType* in the schema path) which can only be "Primary" since it is used to determine if this relationship is the primary ChildOf relationship for this weakness for a given View_ID.   
    
 * ***Weakness Ordinalities***    
-Indicates potential ordering relationships with other weaknesses: <Ordinality, (Description)>    
-The required *Ordinality* element identifies whether the weakness has a **primary**, **resultant**, or **indirect** relationship. It is important to note that it is         possible for the same entry to be primary in some instances and resultant in others.       
-The optional *Description* contains the context in which the relationship exists.   
+Indicates potential ordering relationships with other weaknesses.      
+Elements:   
+     * *Ordinality* (required)   
+     Identifies whether the weakness has a **primary**, **resultant**, or **indirect** relationship.    
+     It is important to note that it is possible for the same entry to be primary in some instances and resultant in others.       
+     * *Description* (optional)   
+     Contains the context in which the relationship exists.   
 <sub>Not in link 2</sub>    
    
 * ***Applicable platforms*** (see *ApplicablePlatformsType* in the schema path)   
 The **languages**, **operating systems**, **architectures**, and **technologies** in which a given weakness could appear. The most common described one is Language.   
-Each of these have some atributes like *Class* and *Name*. However there is one required, which is *Prevalence*. It identifies the regularity with which the weakness is applicable to that platform.   
+Each of these have some atributes like: *Class*, *Name* and:
+     * *Prevalence* (required)   
+     Identifies the regularity with which the weakness is applicable to that platform.   
 Note that when providing an operating system name, an optional Common Platform Enumeration (CPE) identifier can be used to a identify a specific OS.     
     
 * ***Background details*** (see *BackgroundDetailsType* in the schema path)      
 Contains one or more elements, each of which contains information that is relevant but not related to the nature of the weakness itself.     
      
-* ***Alternate Terms*** (see *BackgroundDetailsType* in the schema path)   
-* ***Modes Of Introduction*** (see *BackgroundDetailsType* in the schema path)   
-* ***Exploitation Factors*** (see *BackgroundDetailsType* in the schema path)   
-* ***Likelihood of Exploit*** (see *BackgroundDetailsType* in the schema path)   
-* ***Common Consequences*** (see *BackgroundDetailsType* in the schema path)   
-* ***Detection Methods*** (see *BackgroundDetailsType* in the schema path)   
+* ***Alternate Terms*** (see *AlternateTermsType* in the schema path)   
+To indicate one or more other names used to describe a given weakness.   
+Required elements: 
+     * *Term* (contains the actual alternate term)   
+     * *Description* (context for each alternate term by which this weakness may be known).  
+<sub>Not in link 2</sub>    
+     
+* ***Modes Of Introduction*** (see *ModesOfIntroductionType* in the schema path)   
+To provide information about how and when a given weakness may be introduced. If there are multiple possible introduction points, then a separate Introduction element should be included for each.    
+Elements:
+     * *Phase* (required)    
+     Identifies the point in the product life cycle at which the weakness may be introduced. Examples of it would be: 'Implementation' or 'Architecture and Design'.    
+     * *Note* (optional)    
+     Identifies the typical scenarios under which the weakness may be introduced during the given phase.    
+     
+* ***Exploitation Factors*** (see *ExploitationFactorsType* in the schema path)   
+Conditions or factors that could increase the likelihood of exploit for this weakness.    
+<sub>Not in link 2</sub>    
+     
+* ***Likelihood of Exploit***    
+How likely a weakness is to be exploited if exposed. Appropriate values are one of **Low**, **Medium**, or **High**.    
+    
+* ***Common Consequences*** (see *CommonConsequencesType* in the schema path)   
+To specify individual consequences associated with a weakness.   
+Elements:
+     * *Scope* (required)   
+     Identifies the security property that is violated.    
+     * *Impact* (optional)    
+     Describes the technical impact that arises if an adversary succeeds in exploiting this weakness.     
+     * *Likelihood* (optional)    
+     How likely the specific consequence is expected to be seen relative to the other consequences.     
+     * *Note* (optional)     
+     Additional commentary about a consequence.   
+     <sub> Optional Consequence_ID attribute for internal team use to uniquely identify examples that are repeated across any number of individual weaknesses. Its value matches the following format: CC-1. </sub>    
+    
+* ***Detection Methods*** (see *DetectionMethodsType* in the schema path)   
+To identify methods that may be employed to detect this weakness, including their strengths and limitations.     
+Elements:    
+     * *Method* (required)    
+     Identifies the particular detection method being described.    
+     * *Description* (required)    
+     Provides some context of how this method can be applied to a specific weakness.     
+     * *Effectiveness* (optional)   
+     How effective the detection method may be in detecting the associated weakness. This assumes the use of best-of-breed tools, analysts, and methods. There is limited consideration for financial costs, labor, or time.     
+     * *Effectiveness_Notes* (optional)    
+     Additional discussion of the strengths and shortcomings of this detection method.
+     <sub>Optional Detection_Method_ID attribute for internal team use to uniquely identify methods that are repeated across any number of individual weaknesses. ts value matches the following format: DM-1. </sub>    
+<sub>Not in link 2</sub>    
+     
 * ***Potential Mitigations*** (see *BackgroundDetailsType* in the schema path)   
 * ***Observed examples***    
 * ***Functional Areas*** (see *BackgroundDetailsType* in the schema path)   
