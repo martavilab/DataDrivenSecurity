@@ -8,13 +8,13 @@ So as to study this standard, we can access and download its data from: https://
      
 In the following lines we will have a close look at each one of the simple types of the defined schema and other column values that are present in our dataset (our downloaded file) so we can grasp which type of information we will be dealing with (note that they will be presented in the same order they will be found in the dataset).    
     
-## ***CWE-ID***     
+* ***CWE-ID***     
 The CWE identification number.   
    
-## ***Name***      
+* ***Name***      
 The name assigned to the CWE-ID.       
    
-## ***Weakness Abstraction*** (see *AbstractionEnumeration* in the schema path)      
+* ***Weakness Abstraction*** (see *AbstractionEnumeration* in the schema path)      
 The CWE entries in the list form a tree of different abstraction layers:   
      - **Pillar**     
 An example of a a CWE pillar is: CWE-118: Incorrect Access of Indexable Resource ('Range Error').
@@ -24,7 +24,7 @@ Classes are also very abstract entries. Language and technology independent. An 
 Bases are more specific than classes. An example, CWE-787: Out-Of Bounds-Write and is a child of CWE-119.
      - **Variant**      
 The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.       
-## ***Status*** (see *StatusEnumeration* in the schema path)     
+* ***Status*** (see *StatusEnumeration* in the schema path)     
 Status values that an entity (view, category, weakness) can have:
      * **Deprecated**   
      Entity has been removed from CWE, likely because it was a duplicate or was created in error.    
@@ -40,13 +40,13 @@ Status values that an entity (view, category, weakness) can have:
      All important elements have been verified, and the entry is unlikely to change significantly in the future.    
      
 Status enumeration might change over time.
-## ***Description***   
+* ***Description***   
 A written description of the given weakness.   
    
-## ***Extended description***   
+* ***Extended description***   
 Extra written description (optional).  
    
-## ***Related Weaknesses***  (see *RelatedWeaknessesType* in the schema path)   
+* ***Related Weaknesses***  (see *RelatedWeaknessesType* in the schema path)   
 To refer to other weaknesses that differ only in their level of abstraction. It contains one or more elements each of which contain the nature of the relation.   
 The Nature of a weakness (see *RelatedNatureEnumeration* type in the schema path) is directly related to the abstraction layer it has. The different natures are the following:   
      - **ChildOf**   
