@@ -1,4 +1,4 @@
-## CWE
+# CWE
 <img src="/image/logo_cwe.jpg" width="200">   
 
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
@@ -8,13 +8,13 @@ So as to study this standard, we can access and download its data from: https://
      
 In the following lines we will have a close look at each one of the simple types of the defined schema and other column values that are present in our dataset (our downloaded file) so we can grasp which type of information we will be dealing with (note that they will be presented in the same order they will be found in the dataset).    
     
-* ***CWE-ID***     
+## ***CWE-ID***     
 The CWE identification number.   
    
-* ***Name***      
+## ***Name***      
 The name assigned to the CWE-ID.       
    
-* ***Weakness Abstraction*** (see *AbstractionEnumeration* in the schema path)      
+## ***Weakness Abstraction*** (see *AbstractionEnumeration* in the schema path)      
 The CWE entries in the list form a tree of different abstraction layers:   
      - **Pillar**     
 An example of a a CWE pillar is: CWE-118: Incorrect Access of Indexable Resource ('Range Error').
@@ -24,7 +24,7 @@ Classes are also very abstract entries. Language and technology independent. An 
 Bases are more specific than classes. An example, CWE-787: Out-Of Bounds-Write and is a child of CWE-119.
      - **Variant**      
 The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.       
-* ***Status*** (see *StatusEnumeration* in the schema path)     
+## ***Status*** (see *StatusEnumeration* in the schema path)     
 Status values that an entity (view, category, weakness) can have:
      * **Deprecated**   
      Entity has been removed from CWE, likely because it was a duplicate or was created in error.    
@@ -40,15 +40,15 @@ Status values that an entity (view, category, weakness) can have:
      All important elements have been verified, and the entry is unlikely to change significantly in the future.    
      
 Status enumeration might change over time.
-* ***Description***   
+## ***Description***   
 A written description of the given weakness.   
    
-* ***Extended description***   
+## ***Extended description***   
 Extra written description (optional).  
    
-* ***Related Weaknesses***  (see *RelatedWeaknessesType* in the schema path)   
+## ***Related Weaknesses***  (see *RelatedWeaknessesType* in the schema path)   
 To refer to other weaknesses that differ only in their level of abstraction. It contains one or more elements each of which contain the nature of the relation.   
-The Nature of a weakness (*RelatedNatureEnumeration* type in the schema path) is directly related to the abstraction layer it has. The different natures are the following:   
+The Nature of a weakness (see *RelatedNatureEnumeration* type in the schema path) is directly related to the abstraction layer it has. The different natures are the following:   
      - **ChildOf**   
      Denotes a related weakness at a higher level of abstraction. Therefore, for example, a Pillar cannot have a nature of this kind.   
      - **ParentOf**   
@@ -68,9 +68,11 @@ We can see that this field is composed of 3 or 4 subfields: <Nature, CWE_ID, Vie
 
 *View_ID* subfield specifies which view the given relationship is relevant to. It is a unique identifier of an individual view element to which this relationship pertains. A view represents a perspective with which one might look at the weaknesses in the catalog. There are three different types of views: graphs, explicit slices, and implicit slices. An example of this would be CWE-630: Weaknesses Examined by SAMATE and CWE-658: Weaknesses found in the C Language. Therefore, we could conclude they are the different approaches there are given a specific weakness.   
 
-Finally, we could have the optional subview *Ordinal* which can only be "Primary".   
-   
-***Weakness Ordinalities*** (see *WeaknessOrdinalitiesType* in the schema path)   
+Finally, we could have the optional subview *Ordinal* (see *WeaknessOrdinalitiesType* in the schema path) which can only be "Primary" since it is used to determine if this relationship is the primary ChildOf relationship for this weakness for a given View_ID.   
+     * ***Weakness Ordinalities***    
+     Indicates potential ordering relationships with other weaknesses: <Ordinality, (Description)>    
+     The required *Ordinality* element identifies whether the weakness has a **primary**, **resultant**, or **indirect** relationship. It is important to note that it is         possible for the same entry to be primary in some instances and resultant in others.       
+     The optional *Description* contains the context in which the relationship exists. 
 
 
 
