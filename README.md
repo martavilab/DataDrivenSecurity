@@ -1,7 +1,7 @@
 # DataDrivenSecurity
 
 ## CWE
-<img src="/image/logo_cwe.jpg" width="300">
+<img src="/image/logo_cwe.jpg" width="200">
 
 
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
