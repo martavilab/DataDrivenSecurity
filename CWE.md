@@ -11,8 +11,10 @@ In the following lines we will have a close look at each one of the simple types
     
 * ***CWE-ID***     
 The CWE identification number.   
+   
 * ***Name***      
-The name assigned to the CWE-ID.        
+The name assigned to the CWE-ID.       
+   
 * ***Weakness Abstraction*** (*AbstractionEnumeration* in the schema path)      
 The CWE entries in the list form a tree of different abstraction layers:   
      - **Pillar**     
@@ -24,10 +26,13 @@ Bases are more specific than classes. An example, CWE-787: Out-Of.Bounds-Write a
      - **Variant**      
 The most specific types of weaknesses. An example of such is CWE-121: Stack-based Buffer Overflow which is a child of CWE-787.       
 * ***Status*** (*StatusEnumeration* in the schema path)     
+   s
 * ***Description***   
 A written description of the given weakness.   
+   
 * ***Extended description***   
 Extra written description (optional).  
+   
 * ***Related Weaknesses***  (*RelatedWeaknessesType* in the schema path)   
 To refer to other weaknesses that differ only in their level of abstraction. It contains one or more elements each of which contain the nature of the relation.   
 The Nature of a weakness (*RelatedNatureEnumeration* type in the schema path) is directly related to the abstraction layer it has. The different natures are the following:   
@@ -45,9 +50,11 @@ The Nature of a weakness (*RelatedNatureEnumeration* type in the schema path) is
      To show some similarity with the target weakness yet no other type of relationship can be stated.   
      
 We can see that this field is composed of 3 or 4 subfields: <Nature, CWE_ID, View_ID, (Ordinal)>.    
+
 Firstly, the Nature subfield will be one of the previously seen, which will point to the target weakness, which will be decribed by the CWE_ID.    
-View_ID subfield specifies which view the given relationship is relevant to. It is a unique identifier of an individual view element to which this relationship pertains. A view represents a perspective with which one might look at the weaknesses in the catalog. There are three different types of views: graphs, explicit slices, and implicit slices. An example of this would be CWE-630:Weaknesses Examined by SAMATE and CWE-658: Weaknesses found in the C Language. Therefore, we could conclude they are the different approaches there are given a weakness.   
+View_ID subfield specifies which view the given relationship is relevant to. It is a unique identifier of an individual view element to which this relationship pertains. A view represents a perspective with which one might look at the weaknesses in the catalog. There are three different types of views: graphs, explicit slices, and implicit slices. An example of this would be CWE-630: Weaknesses Examined by SAMATE and CWE-658: Weaknesses found in the C Language. Therefore, we could conclude they are the different approaches there are given a weakness.   
 Finally, we could have the optional subview Ordinal which can only have the attribute "Primary".   
+   
 ***Weakness Ordinalities***
 
 
