@@ -3,7 +3,8 @@
 
 **C**ommon **W**eakness **E**nnumeration is a community-developed list of weaknesses for software and hardware maintained by [MITRE](https://www.mitre.org/).
 In this standard each unique weakness is assigned a specific CWE number.       
-In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/).         
+In order to describe a weakness there is a specific [SCHEMA](https://cwe.mitre.org/documents/schema/).     
+The CWE List and associated classification taxonomy serve as a language that can be used to identify and describe these weaknesses in terms of CWEs.     
 So as to study this standard, we can access and download its data from: https://cwe.mitre.org/data/downloads.html <sub>(link 1)</sub>. Alternatively: https://github.com/Whamo12/fetch-cwe-list <sub>(link 2)</sub>. Once we do so, we will be able to see our data structure.         
      
 In the following lines we will have a close look at each one of the simple types of the defined schema and other column values that are present in our dataset (our downloaded file) so we can grasp which type of information we will be dealing with (note that they will be presented in the same order they will be found in the dataset).    
@@ -115,7 +116,7 @@ Conditions or factors that could increase the likelihood of exploit for this wea
    <sub>Not in link 2</sub>    
      
 * ***Likelihood of Exploit***    
-How likely a weakness is to be exploited if exposed. Appropriate values are one of **Low**, **Medium**, or **High**.    
+How likely a weakness is to be exploited if exposed. Appropriate values are **Low**, **Medium**, or **High**.    
     
 * ***Common Consequences*** (see *CommonConsequencesType* in the schema path)   
 To specify individual consequences associated with a weakness.   
@@ -141,17 +142,57 @@ Elements:
      How effective the detection method may be in detecting the associated weakness. This assumes the use of best-of-breed tools, analysts, and methods. There is limited consideration for financial costs, labor, or time.     
      * *Effectiveness_Notes* (optional)    
      Additional discussion of the strengths and shortcomings of this detection method.     
-     <sub>Optional Detection_Method_ID attribute for internal team use to uniquely identify methods that are repeated across any number of individual weaknesses. ts value matches the following format: DM-1. </sub>   
+     <sub>Optional Detection_Method_ID attribute for internal team use to uniquely identify methods that are repeated across any number of individual weaknesses. Its value matches the following format: DM-1. </sub>   
      
    <sub>Not in link 2</sub>    
      
-* ***Potential Mitigations*** (see *BackgroundDetailsType* in the schema path)   
-* ***Observed examples***    
-* ***Functional Areas*** (see *BackgroundDetailsType* in the schema path)   
-* ***Affected Resources***   
-* ***Taxonomy Mappings*** (see *BackgroundDetailsType* in the schema path)   
-* ***Related Attack Patterns*** (see *BackgroundDetailsType* in the schema path)   
-* ***Notes*** (see *BackgroundDetailsType* in the schema path)   
+* ***Potential Mitigations*** (see *PotentialMitigationsType* in the schema path)   
+Describes potential mitigations associated with a weakness.     
+It contains one or more Mitigation elements, which each represent individual mitigations for the weakness.     
+Elements:    
+     * *Phase*    
+     Indicates the development life cycle phase during which this particular mitigation may be applied.     
+     * *Strategy*    
+     Describes a general strategy for protecting a system to which this mitigation contributes.     
+     * *Effectiveness*    
+     Summarizes how effective the mitigation may be in preventing the weakness.     
+     * *Effectiveness_notes*    
+     * *Description*    
+     Contains a description of this individual mitigation including any strengths and shortcomings of this mitigation for the weakness.     
+     <sub>Optional Mitigation_ID attribute for internal team use to uniquely identify mitigations that are repeated across any number of individual weaknesses. Its value matches the following format: MIT-1. </sub>   
+* ***Observed examples*** (see *ObservedExampleType* in the schema path)   
+Specifies references to a specific observed instance of a weakness in real-world products. Typically this will be a CVE reference.     
+Each Observed_Example element represents a single example.     
+Elements:    
+     * *Reference* (optional)    
+     Identifier for the example being cited. For example, if a CVE is being cited, it should be of the standard CVE identifier format, such as CVE-2005-1951 or CVE-1999-0046.    
+    * *Description* (required)    
+    Product-independent description of the example being cited. The description should present an unambiguous correlation between the example being described and the weakness that it is meant to exemplify.     
+    * *Link* (optional)   
+    Valid URL where more information regarding this example can be obtained.    
+
+* ***Functional Areas*** (see *FunctionalAreasType* in the schema path)  
+Contains one or more functional_area elements, each of which identifies the functional area in which the weakness is most likely to occur. For example, CWE-23: Relative Path Traversal may occur in functional areas of software related to file processing.    
+*Functional_Area* element required.     
+   <sub>Not in link 2</sub>    
+       
+* ***Affected Resources*** (see *AffectedResourcesType* in the schema path)   
+To identify system resources that can be affected by an exploit of this weakness.     
+    
+* ***Taxonomy Mappings*** (see *TaxonomyMappingsType* in the schema path)   
+To provide a mapping from an entry (Weakness or Category) in CWE to an equivalent entry in a different taxonomy.     
+The required *Taxonomy_Name* attribute identifies the taxonomy to which the mapping is being made.     
+Elements:    
+     * *Entry_ID* and *Entry_Name*    
+     To identify the ID and name of the entry which is being mapped.     
+     * *Mapping_Fit*    
+     Identifies how close the CWE is to the entry in the taxonomy.    
+         
+* ***Related Attack Patterns*** (see *RelatedAttackPatternsType* in the schema path)   
+Contains references to attack patterns associated with this weakness. The association implies those attack patterns may be applicable if an instance of this weakness exists. Each related attack pattern is identified by a CAPEC identifier.
+
+* ***Notes*** (see *NotesType* in the schema path)   
+Contains one or more *Note* elements, each of which is used to provide any additional comments about an entry that cannot be captured using other elements.
 
 
 
